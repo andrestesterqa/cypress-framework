@@ -23,7 +23,7 @@ describe("Login test", () => {
   });
 
   it("Check error message when password is empty", () => {
-    loging.typeEmailLogin("nI9wE@example.com");
+    loging.typeEmailLogin(testData.emailRegistered);
     loging.clickSignInButton();
     loging.errorMessageEmptyPasswordIsVisible();
   });
@@ -35,7 +35,7 @@ describe("Login test", () => {
   });
 
   it("Check error by Authentication failed", () => {
-    loging.typeEmailLogin("nI9wE@example.com");
+    loging.typeEmailLogin(testData.emailRegistered);
     loging.typePasswordLogin("test1234");
     loging.clickSignInButton();
     loging.errorMessageAuthFailedIsVisible();
